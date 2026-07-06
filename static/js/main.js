@@ -18,9 +18,9 @@ const nextBtn = document.getElementById("nextBtn");
 
 const photos = [
     "/static/img/photo1.jpeg",
-    "/static/img/photo 2.jpeg",
-    "/static/img/photo 3.jpeg",
-    "/static/img/photo 4.jpeg",
+    "/static/img/photo2.jpeg",
+    "/static/img/photo3.jpeg",
+    "/static/img/photo4.jpeg",
 ]
 let photoIndex = 0;
 

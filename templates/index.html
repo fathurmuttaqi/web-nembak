@@ -4,8 +4,8 @@
 
 {% block content %}
 
-<<audio id="music">
-    <source src="{{ url_for('static', filename='music/bergema.mp3') }}" type="audio/mpeg">
+<audio id="music" preload="auto">
+    <source src="{{ url_for('static', filename='music/lagu.mp3') }}" type="audio/mpeg">
 </audio>
 
 <div class="stars"></div>
