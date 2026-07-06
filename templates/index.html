@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+
+{% block title %}Untuk Easty ❤️{% endblock %}
+
+{% block content %}
+
+<<audio id="music">
+    <source src="{{ url_for('static', filename='music/bergema.mp3') }}" type="audio/mpeg">
+</audio>
+
+<div class="stars"></div>
+
+<!-- Opening -->
+<section id="opening">
+
+    <div class="glass">
+
+        <h3>💌 Untuk seseorang yang spesial</h3>
+
+        <h1>Hai Bidadari ❤️</h1>
+
+        <p>
+            Aku membuat website kecil ini
+            khusus untuk kamu.
+        </p>
+
+        <button id="startBtn">
+            Mulai Perjalanan ❤️
+        </button>
+
+    </div>
+
+</section>
+<!-- Slideshow -->
+<section id="slideshow">
+
+    <img id="slideImage"
+         src="{{ url_for('static', filename='img/photo1.jpg') }}">
+
+</section>
+
+<!-- Surat Cinta -->
+<section id="letterSection">
+
+    <div class="letter-card">
+
+        <h1>💌 Sebuah Pesan Yang Sudah Lama Ingin Kusampaikan...</h1>
+
+        <div class="book">
+
+            <div class="page left-page">
+
+                <p id="typingLeft"></p>
+
+            </div>
+
+            <div class="book-line"></div>
+
+            <div class="page right-page">
+
+                <p id="typingRight"></p>
+
+            </div>
+
+        </div>
+
+        <button id="nextBtn">
+            Lanjut ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<section id="countdownSection">
+
+    <h1 id="countNumber">3</h1>
+
+</section>
+
+<!-- =========================
+     QUESTION
+========================= -->
+
+<section id="questionSection">
+
+    <div class="question-card">
+
+        <h1>❤️</h1>
+
+        <h2>Easty Allicia Sefiq</h2>
+
+        <h3>Mau jadi pacarku?</h3>
+
+        <div class="btn-group">
+
+            <button id="yesBtn">
+                IYA ❤️
+            </button>
+
+            <button id="noBtn">
+                NGGAK 🙈
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        ENDING
+=========================== -->
+
+<section id="endingSection">
+
+    <div class="ending-card">
+
+        <h1>❤️</h1>
+
+        <h2>Terima Kasih Cantikku</h2>
+
+        <h3>Aku Senang Kamu Menerima Perasaanku 🥹</h3>
+
+        <p>
+
+            Semoga hari ini menjadi
+            awal dari cerita indah kita.
+
+        </p>
+
+        <p>
+
+            Terima kasih sudah
+            meluangkan waktu membuka
+            website kecil ini.
+
+        </p>
+
+        <h1 style="margin-top:40px;">
+            I Love You ❤️
+        </h1>
+
+    </div>
+
+</section>
+
+<div id="heartsContainer"></div>
+
+{% endblock %}

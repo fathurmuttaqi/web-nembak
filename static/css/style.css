@@ -1,0 +1,567 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(180deg,#050816,#101b3b,#1d3557);
+    overflow:hidden;
+    width:100%;
+    height:100vh;
+}
+
+/* ================= OPENING ================= */
+
+#opening{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:10;
+
+    transition:0.8s;
+}
+
+.glass{
+
+    position:relative;
+
+    z-index:20;
+
+    width:480px;
+
+    max-width:90%;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.glass h1{
+
+    font-size:42px;
+
+    color:#ff9fc8;
+
+    margin:20px 0;
+
+}
+
+.glass h3{
+
+    color:white;
+
+    font-weight:400;
+
+}
+
+.glass p{
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    color:#eee;
+
+}
+
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    background:#ff4d87;
+    color:white;
+    font-size:17px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* ================= STARS ================= */
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:radial-gradient(white 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    opacity:.4;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+/* ================= SLIDESHOW ================= */
+
+#slideshow{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+}
+
+#slideImage{
+    width:420px;
+    max-width:90%;
+    max-height:85%;
+    object-fit:contain;
+    border-radius:20px;
+}
+
+/* ================= LETTER ================= */
+
+#letterSection{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#060818,#111d46,#1e3c72);
+    padding:20px;
+}
+
+/*=========================
+LETTER CARD
+=========================*/
+
+.letter-card{
+
+    width:1200px;
+
+    max-width:95%;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+    color:white;
+
+}
+
+.letter-card h1{
+
+    text-align:center;
+
+    color:#ff9fc8;
+
+    margin-bottom:35px;
+
+    font-size:35px;
+
+}
+
+.book{
+
+    display:flex;
+
+    align-items:stretch;
+
+    gap:0;
+
+}
+
+.page{
+
+    flex:1;
+
+    padding:25px;
+
+    min-height:520px;
+
+}
+
+.left-page{
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+.right-page{
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+}
+
+.book-line{
+
+    width:4px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:20px;
+
+}
+
+.page p{
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    font-size:20px;
+
+}
+
+#nextBtn{
+
+    display:block;
+
+    margin:35px auto 0;
+
+}
+
+#typingLeft,
+#typingRight{
+
+    text-align:left;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+    white-space:pre-line;
+
+    letter-spacing:.3px;
+
+}
+
+#nextBtn{
+
+    display:none;
+
+    margin:35px auto 0;
+
+    padding:15px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4d87;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#nextBtn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px #ff4d87;
+
+}
+
+/*=========================
+COUNTDOWN
+=========================*/
+
+#countdownSection{
+
+position:fixed;
+
+inset:0;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+background:black;
+
+z-index:120;
+
+}
+
+#countNumber{
+
+font-size:180px;
+
+color:white;
+
+animation:zoom 1s infinite;
+
+}
+
+@keyframes zoom{
+
+0%{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1.2);
+
+opacity:1;
+
+}
+
+}
+
+/*=========================
+QUESTION
+=========================*/
+
+#questionSection{
+
+position:fixed;
+
+inset:0;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(180deg,#050816,#101b3b,#1d3557);
+
+z-index:150;
+
+}
+
+.question-card{
+
+width:550px;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+
+color:white;
+
+}
+
+.question-card h2{
+
+margin-top:20px;
+
+color:#ff9ec7;
+
+}
+
+.question-card h3{
+
+margin:25px 0;
+
+font-size:30px;
+
+}
+
+.btn-group{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+}
+
+#yesBtn{
+
+background:#ff4d87;
+
+}
+
+#noBtn{
+
+background:#666;
+
+position:relative;
+
+}
+
+/*=========================
+ENDING
+=========================*/
+
+#endingSection{
+
+position:fixed;
+
+inset:0;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(180deg,#070b1f,#16213e,#1f4068);
+
+overflow:hidden;
+
+z-index:200;
+
+}
+
+.ending-card{
+
+width:700px;
+
+padding:60px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+text-align:center;
+
+color:white;
+
+box-shadow:0 25px 70px rgba(0,0,0,.5);
+
+animation:endingShow 1.2s;
+
+}
+
+.ending-card h2{
+
+font-size:42px;
+
+color:#ff9fc7;
+
+margin:20px 0;
+
+}
+
+.ending-card p{
+
+margin-top:20px;
+
+font-size:20px;
+
+line-height:2;
+
+}
+
+@keyframes endingShow{
+
+from{
+
+opacity:0;
+
+transform:scale(.6);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/*=========================
+HEARTS
+=========================*/
+
+#heartsContainer{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:500;
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:28px;
+
+animation:heartFall linear forwards;
+
+}
+
+@keyframes heartFall{
+
+0%{
+
+transform:translateY(-80px);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+opacity:0;
+
+}
+
+}
